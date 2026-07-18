@@ -1,0 +1,28 @@
+{
+  "platform": "Bugcrowd",
+  "program": "OpenAI",
+  "title": "Code Interpreter Sandbox Escape in code_interpreter: Python code execution in Code Interpreter escapes the sandbox container, gaining access to the host ",
+  "severity_rating": "P4",
+  "vulnerability_information": {
+    "description": "Python code execution in Code Interpreter escapes the sandbox container, gaining access to the host system.",
+    "affected_product": "code_interpreter",
+    "vulnerability_type": "Code Interpreter Sandbox Escape",
+    "in_scope_justification": "Sandbox escape from Code Interpreter or Codex is explicitly in scope. Demonstrating RCE outside the container boundary qualifies for P1 bounty.",
+    "sandbox_verification": "[INSERT uname -a OUTPUT HERE - must show kernel != 4.4.0]"
+  },
+  "steps_to_reproduce": [
+    "1. Open ChatGPT with Code Interpreter enabled",
+    "2. Submit the Python code that exploits container escape",
+    "3. Observe uname -a output showing modern kernel (not 4.4.0)",
+    "4. Observe whoami output not equal to 'sandbox'",
+    "5. Demonstrate access to host filesystem or cloud metadata"
+  ],
+  "evidence": [
+    "[OUTPUT: uname -a result]",
+    "[OUTPUT: whoami result]"
+  ],
+  "impact": "RCE on the host system. Access to cloud metadata, secrets, and other users' data.",
+  "bounty_expectation": "$200 - $20,000",
+  "researcher_handle": "",
+  "submission_date": "2026-07-18T17:47:31.696001"
+}
