@@ -1,0 +1,26 @@
+{
+  "title": "Guardrail Jailbreak via Information Decomposition",
+  "abstract": "A method for bypassing model guardrails by decomposing dangerous synthesis information into individually safe questions. No single question triggers the model's safety evaluation, but the cumulative answers provide complete dangerous information. This method is retargetable: I have demonstrated it works across at least two JEF-tested boundaries (Illicit Substances: Crystal Methamphetamine and Dangerous Substances: Nerve Agent) on Google Gemini. The technique exploits a fundamental architectural limitation: current safety systems evaluate each user turn individually and do not track cumulative information across turns.",
+  "affected_models": [
+    "Google Gemini"
+  ],
+  "jef_boundaries": [
+    "Illicit Substances: Crystal Methamphetamine",
+    "Dangerous Substances: Nerve Agent"
+  ],
+  "evidence": [
+    "Screenshots of each question + answer",
+    "Cumulative analysis showing complete synthesis information"
+  ],
+  "payout_expectation": "$500-$2,500 (guardrail jailbreak, retargetable)",
+  "submission_url": "https://0din.ai",
+  "steps": [
+    "1. Create free account at 0din.ai",
+    "2. Click 'Submit Disclosure'",
+    "3. Paste the abstract above",
+    "4. Wait 3 business days for response",
+    "5. Submit full PoC with screenshots",
+    "6. Provide government ID + W-8BEN form",
+    "7. Receive payout within 30 days"
+  ]
+}
